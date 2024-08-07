@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header{
+            width: 100%;
+            background-color: white;
+            border: 2px solid red;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            flex-wrap: wrap;
+            overflow: hidden;
+            visibility:visible;
+            position: sticky;
+            left: 0;
+            top: 0;
+            background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+            
+        }
+        #icon{
+            width: 50px;
+            height: 50px;
+            /* border: 2px solid red; */
+            text-shadow: 0cap;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        ul{
+            height: 80%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 20px;
+            list-style-type: none;   
+            /* border: 2px solid black;  */
+            flex-wrap: wrap;
+
+        }
+        a{
+            text-decoration: none;
+            font-size:larger;
+        }
+        /* home */
+        section {
+            width: 100%;
+            height: 100vh;
+            /* border: 2px solid green; */
+            background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .home {
+            width: 500px;
+            height: 400px;
+            /* border: 2px solid blue; */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .homeimg {
+            width: 100%;
+            min-height: 400px;
+        }
+       
+
+         /* coures */
+
+   
+
+        .card {
+            width: 20%;
+            min-width: 200px;
+            height: 300px;
+            border: 2px solid black;
+            border-radius: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+
+        .card_img {
+            width: 100%;
+            height: 200px;
+            border-radius: 5% ;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+      /* contact */
+
+      
+
+        .contact_fb {
+            width: 600px;
+            max-width: 100%;
+            /* border: 2px solid green; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+
+        }
+
+        .contact_fb img {
+            width: 100%;
+            height: auto;
+        }
+
+        form {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border: 1px solid red;
+            width: 100%;
+            border-radius: 5%;
+
+        }
+
+        label, lable {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button[type="submit"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .contacts {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .cont {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .cont img {
+            width: 25px;
+            height: 25px;
+        }
+
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul {
+                justify-content: center;
+                gap: 10px;
+                font-size: medium;
+            }
+          
+            section {
+                height: auto;
+                flex-direction: column;
+            }
+
+            .home {
+                width: 90%;
+                height: auto;
+                padding: 20px;
+                border: none; /* Optional: remove border for smaller screens */
+            }
+
+            .homeimg {
+                width: 100%;
+                min-height: auto;
+            }
+            .card {
+                width: 90%;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .card_img {
+                height: auto;
+            }
+
+            button {
+                width: 100%;
+                padding: 15px;
+            }
+            .contact_fb {
+                width: 90%;
+            }
+
+            form {
+                width: 100%;
+            }
+
+            .contacts {
+                flex-direction: column;
+            }
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <!-- <span>Dreams</span> -->
+        <img id="icon" src="education.png" alt="icon">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#coures">Coures</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- <button type="submit">login</button> -->
+
+    </header>
+    <section id="home">
+        <div class="home">
+            <h1>Learning</h1>
+            <h1>Online</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam deserunt neque sit delectus voluptatum quod minus maxime, dolorem porro nemo.</p>
+            <button type="button">Login</button>
+        </div>
+        <div class="home">
+            <img class="homeimg" src="image-removebg-preview (5).png" alt="img">
+        </div>
+    </section>
+    <section id="coures">
+        <div class="card">
+
+            <img class="card_img" src="website-development.avif" alt="img">
+            <h2>Web Developer</h2>
+            <p>Time: 8 Month</p>
+            <button  class="btns" type="button">START</button>
+        </div>
+        <div  class="card">
+            <img   class="card_img" src="java.jpg" alt="img">
+            <h2>Java Developer</h2>
+            <p>Time : 4 Month</p>
+            <button class="btns" type="button">START</button>
+        </div>
+        <div  class="card">
+            <img  class="card_img" src="python.jpg" alt="img">
+            <h2>Python Developer</h2>
+            <p>Time : 4 Month</p>
+            <button  class="btns" type="button">START</button>
+        </div>
+        <div  class="card">
+            <img  class="card_img" src="ai.jpg" alt="img">
+            <h2>AI Developer</h2>
+            <p>Time : 6 Month</p>
+            <button class="btns" type="button">START</button>
+        </div>
+        <div  class="card">
+            <img  class="card_img" src="back_devel.jpg" alt="img">
+            <h2>BackEnd developer</h2>
+            <p>Time : 6 Month</p>
+            <button  class="btns" type="button">START</button>
+        </div>
+        <div  class="card">
+            <img  class="card_img" src="front.jpg" alt="img">
+            <h2>FrontEnd developer</h2>
+            <p>Time : 6 Month</p>
+            <button class="btns" type="button">START</button>
+        </div>
+        <div  class="card">
+            <img  class="card_img" src="data_scince.jpg" alt="img">
+            <h2>Data Science</h2>
+            <p>Time : 6 Month</p>
+            <button class="btns" type="button">START</button>
+        </div>
+        <div  class="card">
+            <img  class="card_img" src="mear.jpg" alt="img">
+            <h2>MEAR Developer</h2>
+            <p>Time : 6 Month</p>
+            <button  class="btns" type="button">START</button>
+        </div>
+     </section>
+     <section id="contact">
+           
+        <div class="contact_fb">
+            <img src="web-removebg-preview.png" alt="img" width="600px" height="500px">
+        </div>
+
+        <div class="contact_fb">
+            <h1>Feedback</h1>
+            <form>
+                <label>name: <input type="text"></label>
+                   
+                <lable>email:<input type="email"></lable>
+                <lable>feedback:<textarea name="feedback" id="add" cols="40" rows="5"></textarea></lable>
+                <button type="submit">submit</button>
+            </form>
+            <div class="contacts">
+
+                <div class="cont"><img src="email.jpg" alt="img" width="25px" height="25px"><h4>abc@gamil.com</h4></div>
+                <div  class="cont"> <img src="website.png" alt="img"  width="25px" height="25px"><h4>www.Dreams_eduction</h4></div>
+                <div  class="cont"><img src="contact.png" alt="img"  width="25px" height="25px"><h4>2334566783</h4>  </div>
+               
+            </div>
+
+        </div>
+
+     </section>
+     <script>
+         let btn = document.querySelector("button");
+         let start_btn = document.querySelectorAll(".btns");
+         let sub = document.querySelector('button[type="submit"]');
+         let h=document.querySelectorAll("h2")
+
+
+         console.log(start_btn[0])
+         console.log(start_btn.length)
+         console.log(sub)
+         console.log(h[1].value)
+    
+            btn.addEventListener("click", () => {
+                alert("login")
+            });
+
+           for(let i=0;i < start_btn.length ; i++){
+            start_btn[i].addEventListener("click",()=>{
+                alert("start your coures......")
+            });
+            }
+            sub.addEventListener("click",()=>{
+                alert("Submit your Feedback...Thank You....")
+            })
+     </script>
+</body>
+</html>
